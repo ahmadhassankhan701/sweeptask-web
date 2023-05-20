@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Styled List */
+
+h2 {
+	margin: 50px 0 30px 0;
+}
+
+.list-ic a {
+	color: #788288;
+	text-decoration: none;
+	margin-left: 10px;
+}
+.list-ic li {
+	position: relative;
+}
+.list-ic li span {
+	display: inline-block;
+	font-weight: 800;
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	line-height: 2em;
+	border-radius: 1em;
+	background: #000000;
+	color: white;
+	position: relative;
+}
+.list-ic li::before {
+	content: "";
+	position: absolute;
+	background: #000000;
+	z-index: -1;
+}
+.list-ic.vertical {
+	padding: 0;
+	margin: 0;
+}
+.list-ic.vertical li {
+	list-style-type: none;
+	text-align: left;
+}
+.list-ic.vertical li span {
+	margin: 1.4em 0;
+}
+.list-ic.vertical li::before {
+	top: -35px;
+	left: 15px;
+	width: 0.2em;
+	height: 4em;
+}
+.list-ic li:first-child::before {
+	display: none;
+}
+
+/* Footer Main Heading */
+
+.footer_title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	margin-bottom: 20px;
+}
+.footer_content {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 24px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+/* Search form remove borders */
+div.MuiInputBase-formControl.css-gmkwkr-MuiInputBase-root-MuiOutlinedInput-root {
+	border-radius: 0 !important;
+}
+div.css-9e2ha1-MuiInputBase-root-MuiOutlinedInput-root {
+	border-radius: 0 !important;
+}

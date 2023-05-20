@@ -1,16 +1,26 @@
 {
-  "name": "pasha_food",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "13.4.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+	"name": "cleansing",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.10.8",
+		"@emotion/styled": "^11.10.8",
+		"@fontsource/roboto": "^4.5.8",
+		"@mui/icons-material": "^5.11.16",
+		"@mui/material": "^5.12.3",
+		"@mui/styled-engine-sc": "^5.12.0",
+		"next": "13.4.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-reveal": "^1.2.2",
+		"react-slideshow-image": "^4.2.1",
+		"react-toastify": "^9.1.2",
+		"styled-components": "^5.3.10"
+	}
 }
