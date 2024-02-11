@@ -1,13 +1,22 @@
 import {
 	Button,
 	Container,
+	FormControl,
 	Grid,
+	IconButton,
+	Input,
 	InputAdornment,
+	InputLabel,
+	OutlinedInput,
 	TextField,
 	Typography,
 } from "@mui/material";
 import React from "react";
-import { Place, Search } from "@mui/icons-material";
+import {
+	Place,
+	Search,
+	Visibility,
+} from "@mui/icons-material";
 
 const QuoteSearch = () => {
 	return (
@@ -54,22 +63,26 @@ const QuoteSearch = () => {
 							<TextField
 								fullWidth
 								id="input-with-icon-textfield"
-								label="Suburb or Postcode"
-								InputProps={{
-									startAdornment: (
-										<InputAdornment position="start">
-											<Place />
-										</InputAdornment>
-									),
-								}}
+								label={"Suburb or Postal code"}
 								variant="outlined"
-								sx={{ mt: { xs: 2, sm: 0 } }}
+								sx={{
+									mt: { xs: 2, sm: 0 },
+									backgroundImage: "url(/pin.png)",
+									backgroundRepeat: "no-repeat",
+									backgroundPosition: "5px 17px",
+									backgroundSize: "17px",
+									textIndent: "15px",
+								}}
+								inputProps={{
+									style: {
+										paddingLeft: "30px",
+									},
+								}}
 							/>
 						</Grid>
 						<Grid item xs={12} sm={4}>
 							<Button
 								variant="contained"
-								startIcon={<Search />}
 								sx={{
 									height: 55,
 									padding: "0 30px",

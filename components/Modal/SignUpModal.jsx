@@ -48,7 +48,12 @@ const SignUpModal = ({ open, handleClose }) => {
 									}}
 									variant="h4"
 								>
-									clean task
+									<img
+										src={"/logo.png"}
+										alt="clean task"
+										width={192}
+										height={44}
+									/>
 								</Typography>
 								<Typography
 									sx={{

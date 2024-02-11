@@ -46,7 +46,12 @@ const GuideModal = ({ open, handleClose }) => {
 										fontWeight: 700,
 									}}
 								>
-									clean task
+									<img
+										src={"/logo.png"}
+										alt="clean task"
+										width={192}
+										height={44}
+									/>
 								</Typography>
 								<ul className="list-ic vertical">
 									<li>

@@ -20,12 +20,12 @@ const QuoteResults = () => {
 				alignItems={"center"}
 				my={2}
 			>
-				<Grid item xs={12} sm={6} md={4}>
-					<Card sx={{ width: "18rem" }}>
+				<Grid item xs={12} sm={6}>
+					<Card sx={{ maxWidth: "415px", height: "284px" }}>
 						<CardActionArea>
 							<CardMedia
 								component="img"
-								height="140"
+								height="210"
 								image="/search4.png"
 								alt="green iguana"
 							/>
@@ -38,6 +38,7 @@ const QuoteResults = () => {
 										textAlign: "center",
 										fontWeight: "500",
 										fontSize: "20px",
+										lineHeight: "24px",
 									}}
 								>
 									House or Indoors Cleaning
@@ -46,38 +47,12 @@ const QuoteResults = () => {
 						</CardActionArea>
 					</Card>
 				</Grid>
-				<Grid item xs={12} sm={6} md={4}>
-					<Card sx={{ width: "18rem" }}>
+				<Grid item xs={12} sm={6}>
+					<Card sx={{ maxWidth: "415px", height: "284px" }}>
 						<CardActionArea>
 							<CardMedia
 								component="img"
-								height="140"
-								image="/search4.png"
-								alt="green iguana"
-							/>
-							<CardContent>
-								<Typography
-									gutterBottom
-									variant="h5"
-									component="div"
-									sx={{
-										textAlign: "center",
-										fontWeight: "500",
-										fontSize: "20px",
-									}}
-								>
-									House or Indoors Cleaning
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-				</Grid>
-				<Grid item xs={12} sm={6} md={4}>
-					<Card sx={{ width: "18rem" }}>
-						<CardActionArea>
-							<CardMedia
-								component="img"
-								height="140"
+								height="210"
 								image="/search3.png"
 								alt="green iguana"
 							/>
@@ -105,13 +80,14 @@ const QuoteResults = () => {
 				display={"flex"}
 				justifyContent={"center"}
 				alignItems={"center"}
+				my={2}
 			>
-				<Grid item xs={12} sm={6} md={4}>
-					<Card sx={{ width: "18rem" }}>
+				<Grid item xs={12} sm={6}>
+					<Card sx={{ maxWidth: "415px", height: "284px" }}>
 						<CardActionArea>
 							<CardMedia
 								component="img"
-								height="140"
+								height="210"
 								image="/search2.png"
 								alt="green iguana"
 							/>
@@ -124,20 +100,21 @@ const QuoteResults = () => {
 										textAlign: "center",
 										fontWeight: "500",
 										fontSize: "20px",
+										lineHeight: "24px",
 									}}
 								>
-									B&bs or Airbnb
+									House or Indoors Cleaning
 								</Typography>
 							</CardContent>
 						</CardActionArea>
 					</Card>
 				</Grid>
-				<Grid item xs={12} sm={6} md={4}>
-					<Card sx={{ width: "18rem" }}>
+				<Grid item xs={12} sm={6}>
+					<Card sx={{ maxWidth: "415px", height: "284px" }}>
 						<CardActionArea>
 							<CardMedia
 								component="img"
-								height="140"
+								height="210"
 								image="/search1.png"
 								alt="green iguana"
 							/>
@@ -152,33 +129,7 @@ const QuoteResults = () => {
 										fontSize: "20px",
 									}}
 								>
-									Office Cleaning
-								</Typography>
-							</CardContent>
-						</CardActionArea>
-					</Card>
-				</Grid>
-				<Grid item xs={12} sm={6} md={4}>
-					<Card sx={{ width: "18rem" }}>
-						<CardActionArea>
-							<CardMedia
-								component="img"
-								height="140"
-								image="/search1.png"
-								alt="green iguana"
-							/>
-							<CardContent>
-								<Typography
-									gutterBottom
-									variant="h5"
-									component="div"
-									sx={{
-										textAlign: "center",
-										fontWeight: "500",
-										fontSize: "20px",
-									}}
-								>
-									Office Cleaning
+									Outdoors Cleaning
 								</Typography>
 							</CardContent>
 						</CardActionArea>

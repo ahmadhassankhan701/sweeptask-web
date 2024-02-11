@@ -11,6 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import SignUpModal from "../Modal/SignUpModal";
+import { Person } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -32,7 +33,12 @@ function TopNav(props) {
 			}}
 		>
 			<Typography variant="h6" sx={{ my: 2 }}>
-				clean task
+				<img
+					src={"/logo.png"}
+					alt="clean task"
+					width={150}
+					height={30}
+				/>
 			</Typography>
 			<Divider />
 			<Box
@@ -52,7 +58,7 @@ function TopNav(props) {
 						bgcolor: "#000000",
 						color: "#FFFFFF",
 						padding: "10px 20px",
-						textTransform: "lowercase",
+						textTransform: "none",
 						"&:hover": {
 							backgroundColor: "#FFFFFF",
 							color: "#000000",
@@ -60,8 +66,9 @@ function TopNav(props) {
 						},
 					}}
 					onClick={handleOpen}
+					startIcon={<Person />}
 				>
-					join as cleaner
+					Join as a cleaner
 				</Button>
 			</Box>
 		</Box>
@@ -102,8 +109,14 @@ function TopNav(props) {
 							display: { xs: "none", sm: "block" },
 						}}
 					>
-						clean task
+						<img
+							src={"/logo.png"}
+							alt="clean task"
+							width={150}
+							height={30}
+						/>
 					</Typography>
+
 					<Box>
 						<Box
 							sx={{
@@ -113,23 +126,24 @@ function TopNav(props) {
 							<Button
 								sx={{
 									borderRadius: 50,
-									fontSize: 20,
+									fontSize: 18,
 									fontWeight: "400",
 									lineHeight: "24px",
 									bgcolor: "#000000",
 									color: "#FFFFFF",
-									width: 170,
+									width: 180,
 									height: 45,
-									textTransform: "lowercase",
+									textTransform: "none",
 									"&:hover": {
 										backgroundColor: "#FFFFFF",
 										color: "#000000",
 										border: "1px solid #000000",
 									},
 								}}
+								startIcon={<Person />}
 								onClick={handleOpen}
 							>
-								join as cleaner
+								Join as a cleaner
 							</Button>
 						</Box>
 					</Box>

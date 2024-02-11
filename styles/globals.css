@@ -80,3 +80,9 @@ div.MuiInputBase-formControl.css-gmkwkr-MuiInputBase-root-MuiOutlinedInput-root 
 div.css-9e2ha1-MuiInputBase-root-MuiOutlinedInput-root {
 	border-radius: 0 !important;
 }
+
+/* Remove appbar shadow */
+
+.css-1qt4mra-MuiPaper-root-MuiAppBar-root {
+	box-shadow: none !important;
+}

@@ -8,7 +8,9 @@ import React from "react";
 
 const MobileAd = () => {
 	return (
-		<Container sx={{ bgcolor: "lightgray", p: 5 }}>
+		<div
+			style={{ backgroundColor: "#F7F7F7", padding: 50 }}
+		>
 			<Grid
 				container
 				display={"flex"}
@@ -24,32 +26,55 @@ const MobileAd = () => {
 					alignItems={"center"}
 				>
 					<Typography
-						sx={{ fontWeight: 700, fontSize: 24, my: 1 }}
+						sx={{
+							fontWeight: "500",
+							fontSize: 24,
+							lineHeight: "29px",
+							my: 3,
+						}}
 					>
-						Great news your area is covered
+						Download our app on the below stores
 					</Typography>
-					<Typography
-						sx={{ fontWeight: 700, fontSize: 24, my: 2 }}
+					<Grid
+						container
+						maxWidth={430}
+						display={"flex"}
+						spacing={1}
 					>
-						Download Our Mobile App
-					</Typography>
-					<Box display={"flex"}>
-						<img
-							src={"/googleAd.png"}
-							alt={"google play"}
-							width={150}
-							height={50}
-						/>
-						<img
-							src={"/appleAd.png"}
-							alt={"apple"}
-							width={150}
-							height={50}
-						/>
-					</Box>
+						<Grid
+							item
+							xs={12}
+							sm={6}
+							display={"flex"}
+							justifyContent={"center"}
+							alignItems={"center"}
+						>
+							<img
+								src={"/googleAd.png"}
+								alt={"google play"}
+								width={214}
+								height={63}
+							/>
+						</Grid>
+						<Grid
+							item
+							xs={12}
+							sm={6}
+							display={"flex"}
+							justifyContent={"center"}
+							alignItems={"center"}
+						>
+							<img
+								src={"/appleAd.png"}
+								alt={"apple"}
+								width={193}
+								height={64}
+							/>
+						</Grid>
+					</Grid>
 				</Grid>
 			</Grid>
-		</Container>
+		</div>
 	);
 };
 

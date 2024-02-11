@@ -20,7 +20,7 @@ const Footer = () => {
 	const handleOpenGuide = () => setOpenGuide(true);
 	const handleCloseGuide = () => setOpenGuide(false);
 	return (
-		<Container sx={{ mt: 10, bgcolor: "lightgray", p: 5 }}>
+		<Container sx={{ mt: 10, p: 5 }}>
 			<GuideModal
 				open={openGuide}
 				handleClose={handleCloseGuide}
@@ -102,21 +102,18 @@ const Footer = () => {
 					alignItems={"center"}
 				>
 					<Typography variant="h4" sx={{ fontWeight: 700 }}>
-						clean task
+						<img
+							src={"/logo.png"}
+							alt="clean task"
+							width={192}
+							height={44}
+						/>
 					</Typography>
 				</Grid>
 			</Grid>
 			<hr />
 			<Grid container>
-				<Grid
-					item
-					xs={12}
-					sm={4}
-					p={2}
-					display={"flex"}
-					justifyContent={"center"}
-					alignItems={"center"}
-				>
+				<Grid item xs={12} sm={4} py={1}>
 					©2023 Clean Task (Pty) Ltd, All rights reserved.
 				</Grid>
 			</Grid>
