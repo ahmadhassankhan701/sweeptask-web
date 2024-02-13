@@ -11,9 +11,7 @@ const Footer = () => {
 	const [open, setOpen] = React.useState(false);
 	const [openHelp, setOpenHelp] = React.useState(false);
 	const [openCoverage, setOpenCoverage] = React.useState(false);
-	const handleOpenCoverage = () => setOpenCoverage(true);
 	const handleCloseCoverage = () => setOpenCoverage(false);
-	const handleOpenHelp = () => setOpenHelp(true);
 	const handleCloseHelp = () => setOpenHelp(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
