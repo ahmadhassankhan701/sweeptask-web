@@ -60,17 +60,17 @@ h2 {
 /* Footer Main Heading */
 
 .footer_title {
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 29px;
-	margin-bottom: 20px;
+	font-weight: 700 !important;
+	font-size: 24px !important;
+	line-height: 29px !important;
+	margin-bottom: 20px !important;
 }
 .footer_content {
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 24px;
-	margin-bottom: 10px;
-	cursor: pointer;
+	font-weight: 400 !important;
+	font-size: 15px !important;
+	line-height: 24px !important;
+	margin-bottom: 10px !important;
+	cursor: pointer !important;
 }
 
 /* Search form remove borders */
@@ -86,7 +86,3 @@ div.css-9e2ha1-MuiInputBase-root-MuiOutlinedInput-root {
 .css-1qt4mra-MuiPaper-root-MuiAppBar-root {
 	box-shadow: none !important;
 }
-
-/* .place_input {
-	border: 1px solid lightgray !important;
-} */
