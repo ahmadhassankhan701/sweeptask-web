@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const QuoteResults = () => {
+const QuoteResults = ({ cardClick }) => {
 	return (
 		<Container sx={{ mb: 5 }}>
 			<Grid
@@ -21,7 +21,7 @@ const QuoteResults = () => {
 				my={2}
 			>
 				<Grid item xs={12} sm={6}>
-					<Card sx={{ maxWidth: "415px", height: "284px" }}>
+					<Card sx={{ maxWidth: "415px", height: "284px" }} onClick={cardClick}>
 						<CardActionArea>
 							<CardMedia
 								component="img"
@@ -38,7 +38,6 @@ const QuoteResults = () => {
 										textAlign: "center",
 										fontWeight: "500",
 										fontSize: "20px",
-										lineHeight: "24px",
 									}}
 								>
 									House or Indoors Cleaning
@@ -47,7 +46,14 @@ const QuoteResults = () => {
 						</CardActionArea>
 					</Card>
 				</Grid>
-				<Grid item xs={12} sm={6}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					display={"flex"}
+					justifyContent={"flex-end"}
+					alignItems={"center"}
+				>
 					<Card sx={{ maxWidth: "415px", height: "284px" }}>
 						<CardActionArea>
 							<CardMedia
@@ -56,7 +62,14 @@ const QuoteResults = () => {
 								image="/search3.png"
 								alt="green iguana"
 							/>
-							<CardContent>
+							<CardContent
+								sx={{
+									display: "flex",
+									alignItems: "baseline",
+									justifyContent: "center",
+									gap: "5px",
+								}}
+							>
 								<Typography
 									gutterBottom
 									variant="h5"
@@ -68,6 +81,19 @@ const QuoteResults = () => {
 									}}
 								>
 									Outdoors Cleaning
+								</Typography>
+								<Typography
+									gutterBottom
+									variant="h5"
+									component="div"
+									sx={{
+										textAlign: "center",
+										fontWeight: "500",
+										fontSize: "15px",
+										color: "red",
+									}}
+								>
+									(Coming soon)
 								</Typography>
 							</CardContent>
 						</CardActionArea>
@@ -91,7 +117,14 @@ const QuoteResults = () => {
 								image="/search2.png"
 								alt="green iguana"
 							/>
-							<CardContent>
+							<CardContent
+								sx={{
+									display: "flex",
+									alignItems: "baseline",
+									justifyContent: "center",
+									gap: "5px",
+								}}
+							>
 								<Typography
 									gutterBottom
 									variant="h5"
@@ -100,16 +133,35 @@ const QuoteResults = () => {
 										textAlign: "center",
 										fontWeight: "500",
 										fontSize: "20px",
-										lineHeight: "24px",
 									}}
 								>
-									House or Indoors Cleaning
+									B&bs or Airbnb
+								</Typography>
+								<Typography
+									gutterBottom
+									variant="h5"
+									component="div"
+									sx={{
+										textAlign: "center",
+										fontWeight: "500",
+										fontSize: "15px",
+										color: "red",
+									}}
+								>
+									(Coming soon)
 								</Typography>
 							</CardContent>
 						</CardActionArea>
 					</Card>
 				</Grid>
-				<Grid item xs={12} sm={6}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					display={"flex"}
+					justifyContent={"flex-end"}
+					alignItems={"center"}
+				>
 					<Card sx={{ maxWidth: "415px", height: "284px" }}>
 						<CardActionArea>
 							<CardMedia
@@ -118,7 +170,14 @@ const QuoteResults = () => {
 								image="/search1.png"
 								alt="green iguana"
 							/>
-							<CardContent>
+							<CardContent
+								sx={{
+									display: "flex",
+									alignItems: "baseline",
+									justifyContent: "center",
+									gap: "5px",
+								}}
+							>
 								<Typography
 									gutterBottom
 									variant="h5"
@@ -129,7 +188,20 @@ const QuoteResults = () => {
 										fontSize: "20px",
 									}}
 								>
-									Outdoors Cleaning
+									Office Cleaning
+								</Typography>
+								<Typography
+									gutterBottom
+									variant="h5"
+									component="div"
+									sx={{
+										textAlign: "center",
+										fontWeight: "500",
+										fontSize: "15px",
+										color: "red",
+									}}
+								>
+									(Coming soon)
 								</Typography>
 							</CardContent>
 						</CardActionArea>

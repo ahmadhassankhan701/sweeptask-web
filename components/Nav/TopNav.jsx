@@ -33,12 +33,7 @@ function TopNav(props) {
 			}}
 		>
 			<Typography variant="h6" sx={{ my: 2 }}>
-				<img
-					src={"/logo.png"}
-					alt="clean task"
-					width={150}
-					height={30}
-				/>
+				<img src={"/logo.png"} alt="clean task" width={150} height={30} />
 			</Typography>
 			<Divider />
 			<Box
@@ -52,9 +47,11 @@ function TopNav(props) {
 				<Button
 					sx={{
 						borderRadius: 50,
-						fontSize: 20,
+						fontSize: 15,
 						fontWeight: "400",
 						lineHeight: "24px",
+						width: 180,
+						height: 32,
 						bgcolor: "#000000",
 						color: "#FFFFFF",
 						padding: "10px 20px",
@@ -75,9 +72,7 @@ function TopNav(props) {
 	);
 
 	const container =
-		window !== undefined
-			? () => window().document.body
-			: undefined;
+		window !== undefined ? () => window().document.body : undefined;
 
 	return (
 		<Box sx={{ display: "flex" }}>
@@ -88,6 +83,8 @@ function TopNav(props) {
 				sx={{
 					bgcolor: `white`,
 					color: `black`,
+					boxShadow: "none",
+					borderBottom: "1px solid #E2E2E2",
 				}}
 				position="sticky"
 			>
@@ -109,12 +106,7 @@ function TopNav(props) {
 							display: { xs: "none", sm: "block" },
 						}}
 					>
-						<img
-							src={"/logo.png"}
-							alt="clean task"
-							width={150}
-							height={30}
-						/>
+						<img src={"/logo.png"} alt="clean task" width={150} height={30} />
 					</Typography>
 
 					<Box>
@@ -126,13 +118,13 @@ function TopNav(props) {
 							<Button
 								sx={{
 									borderRadius: 50,
-									fontSize: 18,
+									fontSize: 15,
 									fontWeight: "400",
 									lineHeight: "24px",
 									bgcolor: "#000000",
 									color: "#FFFFFF",
-									width: 180,
-									height: 45,
+									width: 160,
+									height: 32,
 									textTransform: "none",
 									"&:hover": {
 										backgroundColor: "#FFFFFF",

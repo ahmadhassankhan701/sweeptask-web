@@ -1,16 +1,9 @@
-import {
-	Box,
-	Container,
-	Grid,
-	Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
 const MobileAd = () => {
 	return (
-		<div
-			style={{ backgroundColor: "#F7F7F7", padding: 50 }}
-		>
+		<div style={{ backgroundColor: "#F7F7F7", padding: 50 }}>
 			<Grid
 				container
 				display={"flex"}
@@ -35,12 +28,7 @@ const MobileAd = () => {
 					>
 						Download our app on the below stores
 					</Typography>
-					<Grid
-						container
-						maxWidth={430}
-						display={"flex"}
-						spacing={1}
-					>
+					<Grid container maxWidth={430} display={"flex"} spacing={1}>
 						<Grid
 							item
 							xs={12}
@@ -64,12 +52,7 @@ const MobileAd = () => {
 							justifyContent={"center"}
 							alignItems={"center"}
 						>
-							<img
-								src={"/appleAd.png"}
-								alt={"apple"}
-								width={193}
-								height={64}
-							/>
+							<img src={"/appleAd.png"} alt={"apple"} width={193} height={64} />
 						</Grid>
 					</Grid>
 				</Grid>
