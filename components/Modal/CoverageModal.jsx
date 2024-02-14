@@ -52,7 +52,7 @@ const CoverageModal = ({ open, handleClose }) => {
 										src={"/logo.png"}
 										alt="clean task"
 										width={192}
-										height={44}
+										height={40}
 									/>
 								</Typography>
 								<Typography
@@ -66,11 +66,7 @@ const CoverageModal = ({ open, handleClose }) => {
 								</Typography>
 								<Grid container spacing={2} sx={{ mt: 2 }}>
 									<Grid item xs={12}>
-										<TextField
-											label="Full Name"
-											variant="outlined"
-											fullWidth
-										/>
+										<TextField label="Full Name" variant="outlined" fullWidth />
 									</Grid>
 								</Grid>
 								<Grid container sx={{ mt: 2 }}>
@@ -84,11 +80,7 @@ const CoverageModal = ({ open, handleClose }) => {
 								</Grid>
 								<Grid container sx={{ mt: 2 }}>
 									<Grid item xs={12}>
-										<TextField
-											label="Address"
-											variant="outlined"
-											fullWidth
-										/>
+										<TextField label="Address" variant="outlined" fullWidth />
 									</Grid>
 								</Grid>
 								<Button

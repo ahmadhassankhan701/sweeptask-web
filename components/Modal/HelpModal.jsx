@@ -1,11 +1,4 @@
-import {
-	Backdrop,
-	Box,
-	Fade,
-	Grid,
-	Modal,
-	Typography,
-} from "@mui/material";
+import { Backdrop, Box, Fade, Grid, Modal, Typography } from "@mui/material";
 import React from "react";
 const style = {
 	position: "absolute",
@@ -50,27 +43,21 @@ const HelpModal = ({ open, handleClose }) => {
 										src={"/logo.png"}
 										alt="clean task"
 										width={192}
-										height={44}
+										height={40}
 									/>
 								</Typography>
 								<ul class="list-ic vertical">
 									<li>
 										<span> 1</span>
-										<a href="#">
-											Download our app and sign up
-										</a>
+										<a href="#">Download our app and sign up</a>
 									</li>
 									<li>
 										<span> 2</span>
-										<a href="#">
-											Get free quotes on the app
-										</a>
+										<a href="#">Get free quotes on the app</a>
 									</li>
 									<li>
 										<span> 3</span>
-										<a href="#">
-											Get your home cleaned, garden or Bnb
-										</a>
+										<a href="#">Get your home cleaned, garden or Bnb</a>
 									</li>
 								</ul>
 							</Grid>

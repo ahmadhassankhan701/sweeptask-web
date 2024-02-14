@@ -20,7 +20,14 @@ const QuoteResults = ({ cardClick }) => {
 				alignItems={"center"}
 				my={2}
 			>
-				<Grid item xs={12} sm={6}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					display={"flex"}
+					justifyContent={"center"}
+					alignItems={"center"}
+				>
 					<Card sx={{ maxWidth: "415px", height: "284px" }} onClick={cardClick}>
 						<CardActionArea>
 							<CardMedia
@@ -51,7 +58,7 @@ const QuoteResults = ({ cardClick }) => {
 					xs={12}
 					sm={6}
 					display={"flex"}
-					justifyContent={"flex-end"}
+					justifyContent={"center"}
 					alignItems={"center"}
 				>
 					<Card sx={{ maxWidth: "415px", height: "284px" }}>
@@ -108,7 +115,14 @@ const QuoteResults = ({ cardClick }) => {
 				alignItems={"center"}
 				my={2}
 			>
-				<Grid item xs={12} sm={6}>
+				<Grid
+					item
+					xs={12}
+					sm={6}
+					display={"flex"}
+					justifyContent={"center"}
+					alignItems={"center"}
+				>
 					<Card sx={{ maxWidth: "415px", height: "284px" }}>
 						<CardActionArea>
 							<CardMedia
@@ -159,7 +173,7 @@ const QuoteResults = ({ cardClick }) => {
 					xs={12}
 					sm={6}
 					display={"flex"}
-					justifyContent={"flex-end"}
+					justifyContent={"center"}
 					alignItems={"center"}
 				>
 					<Card sx={{ maxWidth: "415px", height: "284px" }}>

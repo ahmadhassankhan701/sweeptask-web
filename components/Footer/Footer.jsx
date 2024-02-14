@@ -13,6 +13,7 @@ const Footer = () => {
 	const [openCoverage, setOpenCoverage] = React.useState(false);
 	const handleCloseCoverage = () => setOpenCoverage(false);
 	const handleCloseHelp = () => setOpenHelp(false);
+	const handleOpenHelp = () => setOpenHelp(true);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	const handleOpenGuide = () => setOpenGuide(true);
@@ -26,10 +27,10 @@ const Footer = () => {
 			<Grid container my={2}>
 				<Grid item xs={12} sm={4} display={"flex"} flexDirection={"column"}>
 					<Typography className="footer_title">For Customers</Typography>
-					<Typography className="footer_content" onClick={handleOpen}>
+					<Typography className="footer_content" onClick={handleOpenHelp}>
 						Find a cleaner
 					</Typography>
-					<Typography className="footer_content" onClick={handleOpenGuide}>
+					<Typography className="footer_content" onClick={handleOpenHelp}>
 						How it works
 					</Typography>
 				</Grid>

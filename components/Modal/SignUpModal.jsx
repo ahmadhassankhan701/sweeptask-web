@@ -52,7 +52,7 @@ const SignUpModal = ({ open, handleClose }) => {
 										src={"/logo.png"}
 										alt="clean task"
 										width={192}
-										height={44}
+										height={40}
 									/>
 								</Typography>
 								<Typography
@@ -73,11 +73,7 @@ const SignUpModal = ({ open, handleClose }) => {
 										/>
 									</Grid>
 									<Grid item xs={12} sm={6}>
-										<TextField
-											label="Last Name"
-											variant="outlined"
-											fullWidth
-										/>
+										<TextField label="Last Name" variant="outlined" fullWidth />
 									</Grid>
 								</Grid>
 								<Grid container sx={{ mt: 2 }} spacing={1}>

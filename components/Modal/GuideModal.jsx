@@ -1,11 +1,4 @@
-import {
-	Backdrop,
-	Box,
-	Fade,
-	Grid,
-	Modal,
-	Typography,
-} from "@mui/material";
+import { Backdrop, Box, Fade, Grid, Modal, Typography } from "@mui/material";
 import React from "react";
 const style = {
 	position: "absolute",
@@ -50,7 +43,7 @@ const GuideModal = ({ open, handleClose }) => {
 										src={"/logo.png"}
 										alt="clean task"
 										width={192}
-										height={44}
+										height={40}
 									/>
 								</Typography>
 								<ul className="list-ic vertical">
@@ -60,16 +53,11 @@ const GuideModal = ({ open, handleClose }) => {
 									</li>
 									<li>
 										<span> 2</span>
-										<a href="#">
-											Get jobs and start making money
-										</a>
+										<a href="#">Get jobs and start making money</a>
 									</li>
 									<li>
 										<span> 3</span>
-										<a href="#">
-											Offer good service get ratings and
-											make more money
-										</a>
+										<a href="#">Get good ratings & make more money</a>
 									</li>
 								</ul>
 							</Grid>
