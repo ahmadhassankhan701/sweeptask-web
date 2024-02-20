@@ -2,6 +2,7 @@ import React from "react";
 import usePlacesAutocomplete, {
 	getGeocode,
 	getLatLng,
+	getZipCode,
 } from "use-places-autocomplete";
 import {
 	Combobox,
@@ -11,7 +12,6 @@ import {
 	ComboboxOption,
 } from "@reach/combobox";
 import "@reach/combobox/styles.css";
-import { Place, Search } from "@mui/icons-material";
 
 const Places = ({ locationChange }) => {
 	const {
@@ -31,9 +31,9 @@ const Places = ({ locationChange }) => {
 		setValue(address, false);
 		clearSuggestions();
 		try {
-			const results = await getGeocode({ address });
-			const { lat, lng } = getLatLng(results[0]);
-			locationChange(lat, lng);
+			const res = await getGeocode({ address });
+			const zCode = getZipCode(res[0], false);
+			locationChange(zCode);
 		} catch (error) {
 			console.log("😱 Error: ", error);
 		}

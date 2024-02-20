@@ -13,86 +13,56 @@ import React, { useState } from "react";
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "@/firebase";
 import haversineDistance from "haversine-distance";
+import { toast } from "react-toastify";
+import EstimateModal from "@/components/Modal/EstimateModal";
 const QuoteSearch = () => {
 	const [service, setService] = useState("");
-	const [location, setLocation] = useState({
-		lat: 0,
-		lng: 0,
-	});
+	const [location, setLocation] = useState("");
+	const [pricing, setPricing] = useState(null);
+	const [modalOpen, setModalOpen] = useState(false);
 	const handleSearch = () => {
-		if (service === "" || location.lat === 0 || location.lng === 0) {
-			alert("Please fill all the fields!");
+		if (service === "" || location === "") {
+			toast.error("All fields are required!");
+			return;
+		}
+		if (!location) {
+			toast.error("Could not fetch. Try changing to nearest place!");
 			return;
 		}
 		if (service !== "indoor") {
-			alert("This Service is not available yet!");
+			toast.error("This Service is not available yet!");
 			return;
 		}
-		try {
-			const pros = query(
-				collection(db, "Users"),
-				where("role", "==", "professional"),
-				orderBy("createdAt", "asc")
-			);
-			let items = [];
-			getDocs(pros)
-				.then((querySnapshot) => {
-					if (querySnapshot.size == 0) {
-						alert("No professional found");
-						return;
-					}
+		const areas = query(
+			collection(db, "Pricing"),
+			where("postal", "==", location)
+		);
+		getDocs(areas)
+			.then((querySnapshot) => {
+				if (querySnapshot.size == 0) {
+					toast.error("Not found. Area is not covered!");
+				} else {
 					querySnapshot.forEach((doc) => {
-						items.push({ key: doc.id, ...doc.data() });
+						setPricing(doc.data());
+						setModalOpen(true);
 					});
-					filterByRange(items);
-				})
-				.catch((err) => {
-					console.log(err);
-				});
-		} catch (error) {
-			alert("Something went wrong!");
-			console.log(error);
-		}
-	};
-	const filterByRange = (items) => {
-		try {
-			let kmRange = 25 * 1000;
-			const filteredPros = items.filter((item) => {
-				let distance = haversineDistance(
-					{
-						latitude: parseInt(item.location.lat),
-						longitude: parseInt(item.location.lng),
-					},
-					{
-						latitude: parseInt(location.lat),
-						longitude: parseInt(location.lng),
-					}
-				);
-				if (distance <= kmRange) {
-					return true;
 				}
+			})
+			.catch((err) => {
+				toast.error("Something went wrong!");
+				console.log(err);
 			});
-			if (Object.keys(filteredPros).length == 0) {
-				setService("");
-				setLocation({ lat: 0, lng: 0 });
-				alert("No professional found in 25 km range");
-				return;
-			} else {
-				setService("");
-				setLocation({ lat: 0, lng: 0 });
-				alert("Hurray! We provide service in your area");
-				return;
-			}
-		} catch (error) {
-			alert(error.message);
-			console.log(error.message);
-		}
 	};
-	const locationChange = (lat, lng) => {
-		setLocation({ lat, lng });
+	const locationChange = (postalCode) => {
+		setLocation(postalCode);
 	};
 	return (
 		<Container sx={{ my: 10 }}>
+			<EstimateModal
+				open={modalOpen}
+				handleClose={() => setModalOpen(false)}
+				data={pricing}
+			/>
 			<Grid
 				container
 				display={"flex"}
