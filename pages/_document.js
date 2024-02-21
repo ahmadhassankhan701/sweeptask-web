@@ -23,7 +23,7 @@ export default function Document() {
 			<body>
 				<script
 					defer
-					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0s7tq52XRV37QIon2GNNp1KoD07cSugI&libraries=places"
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0s7tq52XRV37QIon2GNNp1KoD07cSugI&loading=async&libraries=places&callback=Function.prototype"
 				></script>
 				<Main />
 				<NextScript />
