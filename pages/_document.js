@@ -19,12 +19,12 @@ export default function Document() {
 					rel="stylesheet"
 					href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 				/>
-			</Head>
-			<body>
 				<script
 					defer
-					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0s7tq52XRV37QIon2GNNp1KoD07cSugI&loading=async&libraries=places&callback=Function.prototype"
+					src={`https://maps.googleapis.com/maps/api/js?key=AIzaSyC0s7tq52XRV37QIon2GNNp1KoD07cSugI&loading=async&libraries=places&callback=Function.prototype`}
 				></script>
+			</Head>
+			<body>
 				<Main />
 				<NextScript />
 			</body>

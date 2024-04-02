@@ -1,7 +1,6 @@
 import React from "react";
 import usePlacesAutocomplete, {
 	getGeocode,
-	getLatLng,
 	getZipCode,
 } from "use-places-autocomplete";
 import {
@@ -12,7 +11,6 @@ import {
 	ComboboxOption,
 } from "@reach/combobox";
 import "@reach/combobox/styles.css";
-
 const Places = ({ locationChange }) => {
 	const {
 		ready,
