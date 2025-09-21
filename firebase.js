@@ -4,16 +4,15 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-	apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
-	authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN,
-	projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECTID,
-	storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET,
-	messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID,
-	appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
-	measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENTID,
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
 };
 
-export const app = initializeApp(firebaseConfig, "clean-task");
+export const app = initializeApp(firebaseConfig, "sweeptask");
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const storage = getStorage(app);
